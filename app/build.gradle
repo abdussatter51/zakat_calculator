@@ -35,4 +35,15 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    //Picasso for image loading
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    //admob
+    implementation 'com.google.android.gms:play-services-ads:20.5.0'
+
+    //Youtube Player
+    implementation files('libs/YouTubeAndroidPlayerApi.jar')
+
+    //Lottie Library
+    implementation 'com.airbnb.android:lottie:3.7.0'
 }

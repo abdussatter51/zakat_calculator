@@ -42,5 +42,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //Go to Video Activity
+        tvZVideo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent videoIntent = new Intent( MainActivity.this, VideoPlaylist.class);
+                startActivity(videoIntent);
+                Toast.makeText(MainActivity.this, "Welcome to Video Masala", Toast.LENGTH_SHORT).show();
+            }
+        });
+
     }
 }

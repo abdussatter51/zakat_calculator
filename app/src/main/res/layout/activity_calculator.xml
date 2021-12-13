@@ -601,7 +601,7 @@
             android:paddingTop="0dp"
             android:paddingRight="10dp"
             android:paddingBottom="0dp"
-            android:text="5485454"
+            android:text="0"
             android:textColor="@color/white"
             android:textSize="20sp" />
 

@@ -9,5 +9,6 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="scroll_text_color">#B7000000</color>
+    <color name="color_700">#01786D</color>
 
 </resources>

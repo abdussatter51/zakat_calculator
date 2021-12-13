@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VideoPlaylist"
+    android:background="#FFFFFF"
+    android:id="@+id/_rootLay"
+    >
+
+
+
+    <!--- ScrollView That contains video details -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true">
+
+        <!-- This layout will contain items by JAVA programatically -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--Heading Section-->
+            <RelativeLayout
+                android:id="@+id/videoLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="0dp">
+
+                <TextView
+                    android:id="@+id/tvSItemBack"
+                    style="@style/scroll_item_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:gravity="left"
+                    android:text="Back" />
+
+                <TextView
+                    style="@style/scroll_item_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:gravity="left"
+                    android:text="বিস্তারিত" />
+
+
+            </RelativeLayout>
+
+            <!-- Cover Section Starts-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginBottom="10dp"
+                android:visibility="gone"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cover" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#40000000"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tvDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="January 21"
+                        android:textColor="#FFFFFF"
+                        android:textSize="28sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/app_name"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/tree_angle2"
+                    android:gravity="start|bottom"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="3dp"
+                    android:text="Dev. by ABDUS SATTER"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16dp"
+                    android:textStyle="italic" />
+
+
+            </RelativeLayout>
+            <!-- Cover Section ENDS ####################### -->
+
+
+            <LinearLayout
+                android:id="@+id/layoutContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="60dp"
+                android:orientation="vertical">
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+    <!--- **************************************** -->
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="10dp"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:visibility="visible"
+        app:backgroundTint="@color/color_700"
+        app:srcCompat="@drawable/share_icon"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/layPlayer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+
+        <include
+            layout="@layout/player"
+            />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

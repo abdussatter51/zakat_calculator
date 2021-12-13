@@ -7,6 +7,7 @@
         <entry key="..\:/Apps/ZakatCalculator/app/src/main/res/drawable/bottom_shade.xml" value="0.14635416666666667" />
         <entry key="..\:/Apps/ZakatCalculator/app/src/main/res/drawable/curved_rectangle.xml" value="0.14635416666666667" />
         <entry key="..\:/Apps/ZakatCalculator/app/src/main/res/drawable/ed_background.xml" value="0.23703703703703705" />
+        <entry key="..\:/Apps/ZakatCalculator/app/src/main/res/drawable/item_back1.xml" value="0.14635416666666667" />
         <entry key="..\:/Apps/ZakatCalculator/app/src/main/res/drawable/orange_button.xml" value="0.21296296296296297" />
         <entry key="..\:/Apps/ZakatCalculator/app/src/main/res/drawable/rectangle_transparent.xml" value="0.14635416666666667" />
         <entry key="..\:/Apps/ZakatCalculator/app/src/main/res/drawable/shade.xml" value="0.21296296296296297" />
@@ -15,6 +16,11 @@
         <entry key="..\:/Apps/ZakatCalculator/app/src/main/res/layout/activity_calculator.xml" value="0.2" />
         <entry key="..\:/Apps/ZakatCalculator/app/src/main/res/layout/activity_main.xml" value="0.2235722964763062" />
         <entry key="..\:/Apps/ZakatCalculator/app/src/main/res/layout/activity_splash.xml" value="0.1793478260869565" />
+        <entry key="..\:/Apps/ZakatCalculator/app/src/main/res/layout/activity_video.xml" value="0.25416666666666665" />
+        <entry key="..\:/Apps/ZakatCalculator/app/src/main/res/layout/activity_video_playlist.xml" value="0.24010416666666667" />
+        <entry key="..\:/Apps/ZakatCalculator/app/src/main/res/layout/player.xml" value="0.25416666666666665" />
+        <entry key="..\:/Apps/ZakatCalculator/app/src/main/res/layout/video_item.xml" value="0.25416666666666665" />
+        <entry key="..\:/Apps/ZakatCalculator/app/src/main/res/layout/video_playlist_activity.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>
