@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        >
+
+        <TextView
+            android:id="@+id/tvSItemBack"
+            style="@style/scroll_item_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:gravity="left"
+            android:text="Back"
+
+            />
+        <TextView
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="বিস্তারিত"
+            style="@style/scroll_item_text"
+            android:gravity="left"
+            />
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_marginBottom="-80dp"
+        android:layout_marginTop="-20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+            <TextView
+                android:id="@+id/tvzCalculator"
+                android:layout_marginTop="105dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="যাকাত ক্যালকুলেটর"
+                style="@style/scroll_item_text"
+                />
+            <TextView
+                android:id="@+id/tvZWhat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="যাকাত কি ?"
+                style="@style/scroll_item_text"
+                />
+            <TextView
+                android:id="@+id/tvZImportance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="যাকাতের প্রয়োজনীয়তা"
+                style="@style/scroll_item_text"
+                />
+            <TextView
+                android:id="@+id/tvZPunishment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="যাকাতের না দেয়ার শাস্তি"
+                style="@style/scroll_item_text"
+                />
+
+            <TextView
+                android:id="@+id/tvZAsset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="যে সম্পদের যাকাত ফরাজ"
+                style="@style/scroll_item_text"
+                />
+            <TextView
+                android:id="@+id/tvZFree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="যে সম্পদের যাকাত দিতে হয় না"
+                style="@style/scroll_item_text"
+                />
+            <TextView
+                android:id="@+id/tvZAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="যাকাতের হিসাব ও বন্টনের খাত"
+                style="@style/scroll_item_text"
+                />
+
+            <TextView
+                android:id="@+id/tvZFarad"
+                style="@style/scroll_item_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="যাকাত ফরয হওয়ার শর্তসমূহ" />
+
+            <TextView
+                android:id="@+id/tvZGive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="যাদের যাকাত দেয়া যায়"
+                style="@style/scroll_item_text"
+                />
+            <TextView
+                android:id="@+id/tvZProhibited"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="যাদের যাকাত দেয়া নিষেধ"
+                style="@style/scroll_item_text"
+                />
+            <TextView
+                android:id="@+id/tvZMasala"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="যাকাতের মাসলা-মাসায়েল"
+                style="@style/scroll_item_text"
+                />
+            <TextView
+                android:id="@+id/tvZOweMasala"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ঋণীর মাসায়েল"
+                style="@style/scroll_item_text"
+                />
+            <TextView
+                android:id="@+id/tvZVideo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="যাকাতের মাসলা-মাসায়েল ভিডিও"
+                style="@style/scroll_item_text"
+                />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

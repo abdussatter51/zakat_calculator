@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalculatorActivity">
+<!--  header button-->
+  <RelativeLayout
+      android:id="@+id/calculatorLayout"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="10dp"
+      android:layout_marginTop="10dp"
+      android:layout_marginEnd="10dp"
+      android:layout_marginBottom="0dp">
+
+    <TextView
+        android:id="@+id/tvSItemBack"
+        style="@style/scroll_item_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="left"
+        android:text="Back" />
+
+    <TextView
+        style="@style/scroll_item_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:gravity="left"
+        android:text="বিস্তারিত" />
+
+
+  </RelativeLayout>
+
+<!--  ScrollView Part-->
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/calculatorLayout"
+      android:layout_marginStart="5dp"
+      android:layout_marginTop="0dp"
+      android:layout_marginEnd="5dp"
+      android:layout_marginBottom="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/two_color"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:fontFamily="sans-serif-thin"
+          android:gravity="center"
+          android:padding="15dp"
+          android:text="যাকাত ক্যালকুলেটর"
+          android:textColor="#FFFFFF"
+          android:textSize="23sp" />
+
+      <TextView
+          style="@style/calculator_tex_style"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:text="@string/nisab_tex" />
+
+      <TextView
+          style="@style/calculator_tex_style"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:paddingTop="10dp"
+          android:paddingBottom="10dp"
+          android:text="এ বছর যাকাতের নিসাব পরিমাণ" />
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:gravity="center"
+          android:orientation="horizontal"
+
+          >
+
+        <TextView
+            android:id="@+id/tvNisabTK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="0dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="0dp"
+            android:text="41370.0"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            style="@style/calculator_tex_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:paddingLeft="10dp"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:text="টাকা" />
+      </LinearLayout>
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="5dp">
+
+        <TextView
+            android:id="@+id/tvSilver"
+            style="@style/calculator_tex_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="left"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:text="রুপা (ভরি)" />
+
+        <EditText
+            android:id="@+id/edNisabTK"
+            style="@style/calculator_tex_style"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/ed_background"
+            android:gravity="center"
+            android:hint="788"
+            android:inputType="number"
+            android:maxLength="6"
+            android:textColorHint="#57FFFFFF" />
+
+        <TextView
+            android:id="@+id/tvTaka"
+            style="@style/calculator_tex_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="left"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:text="টাকা ধরে" />
+      </RelativeLayout>
+
+      <TextView
+          style="@style/calculator_tex_style"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:gravity="center"
+          android:paddingTop="0dp"
+          android:paddingBottom="0dp"
+          android:text="আপনার এলাকার রুপার দাম দিন" />
+
+      <TextView
+          style="@style/calculator_tex_style"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="10dp"
+          android:gravity="center"
+          android:paddingTop="0dp"
+          android:paddingBottom="0dp"
+          android:text="@string/many_scholar_says"
+
+          />
+
+      <TextView
+          style="@style/calculator_tex_style"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:gravity="center"
+          android:paddingTop="0dp"
+          android:paddingBottom="0dp"
+          android:text="@string/gold_or_silver_value" />
+
+      <TextView
+          style="@style/calculator_tex_style"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:gravity="center"
+          android:paddingTop="0dp"
+          android:paddingBottom="0dp"
+          android:text="@string/valuation_zakat" />
+
+      <Button
+          android:id="@+id/btnNisabCalculate"
+          style="@style/button_text_style"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:layout_marginTop="20dp"
+          android:gravity="center"
+          android:paddingLeft="15dp"
+          android:paddingRight="15dp"
+          android:text="পরিবর্তন করুন" />
+      <!--      Divider Layout-->
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="3dp"
+          android:layout_marginTop="20dp"
+          android:layout_marginBottom="20dp"
+          android:background="#14403C" />
+      <!--    Gold  Input Part-->
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="5dp">
+
+        <TextView
+            style="@style/calculator_tex_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="left"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:text="স্বর্ণ / স্বর্ণের জুয়েলারি" />
+
+        <EditText
+            android:id="@+id/edGoldTK"
+            style="@style/calculator_tex_style"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ed_background"
+            android:gravity="center"
+            android:hint="টাকা"
+            android:inputType="number"
+            android:maxLength="12"
+            android:textColorHint="#57FFFFFF" />
+      </RelativeLayout>
+
+      <!--      Divider Layout-->
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="3dp"
+          android:layout_marginTop="20dp"
+          android:layout_marginBottom="20dp"
+          android:background="#14403C" />
+      <!--    Silver  Input Part-->
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="5dp">
+
+        <TextView
+            style="@style/calculator_tex_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="left"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:text="রুপা / রুপার জুয়েলারি" />
+
+        <EditText
+            android:id="@+id/edSilverTK"
+            style="@style/calculator_tex_style"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ed_background"
+            android:gravity="center"
+            android:hint="টাকা"
+            android:inputType="number"
+            android:maxLength="12"
+            android:textColorHint="#57FFFFFF" />
+      </RelativeLayout>
+
+      <!-- Divider Layout -->
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="3dp"
+          android:layout_marginTop="20dp"
+          android:layout_marginBottom="20dp"
+          android:background="#14403C" />
+      <!-- Stone Input Part -->
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="5dp">
+
+        <TextView
+            style="@style/calculator_tex_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="left"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:text="মূল্যবান পাথর" />
+
+        <EditText
+            android:id="@+id/edStoneTK"
+            style="@style/calculator_tex_style"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ed_background"
+            android:gravity="center"
+            android:hint="টাকা"
+            android:inputType="number"
+            android:maxLength="12"
+            android:textColorHint="#57FFFFFF" />
+      </RelativeLayout>
+
+      <!-- Divider Layout -->
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="3dp"
+          android:layout_marginTop="20dp"
+          android:layout_marginBottom="20dp"
+          android:background="#14403C" />
+      <!-- Cash Input Part -->
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="5dp">
+
+        <TextView
+            style="@style/calculator_tex_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="left"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:text="নগদ টাকা" />
+
+        <EditText
+            android:id="@+id/edCashTK"
+            style="@style/calculator_tex_style"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ed_background"
+            android:gravity="center"
+            android:hint="টাকা"
+            android:inputType="number"
+            android:maxLength="12"
+            android:textColorHint="#57FFFFFF" />
+      </RelativeLayout>
+
+      <!-- Divider Layout -->
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="3dp"
+          android:layout_marginTop="20dp"
+          android:layout_marginBottom="20dp"
+          android:background="#14403C" />
+      <!-- Investment Input Part -->
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="5dp">
+
+        <TextView
+            style="@style/calculator_tex_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="left"
+            android:maxLines="2"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:text="ঋণ দিয়েছেন / বিনিয়োগ /\n তহবিল / শেয়ার" />
+
+        <EditText
+            android:id="@+id/edInvestmentTK"
+            style="@style/calculator_tex_style"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ed_background"
+            android:gravity="center"
+            android:hint="টাকা"
+            android:inputType="number"
+            android:maxLength="12"
+            android:textColorHint="#57FFFFFF" />
+      </RelativeLayout>
+
+      <!-- Divider Layout -->
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="3dp"
+          android:layout_marginTop="20dp"
+          android:layout_marginBottom="20dp"
+          android:background="#14403C" />
+      <!-- Land Asset Input Part -->
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="5dp">
+
+        <TextView
+            style="@style/calculator_tex_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="left"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:text="জমিদারী সম্পদ" />
+
+        <EditText
+            android:id="@+id/edLandTK"
+            style="@style/calculator_tex_style"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ed_background"
+            android:gravity="center"
+            android:hint="টাকা"
+            android:inputType="number"
+            android:maxLength="12"
+            android:textColorHint="#57FFFFFF" />
+      </RelativeLayout>
+
+      <!-- Divider Layout -->
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="3dp"
+          android:layout_marginTop="20dp"
+          android:layout_marginBottom="20dp"
+          android:background="#14403C" />
+      <!-- Business Goods Input Part -->
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="5dp">
+
+        <TextView
+            style="@style/calculator_tex_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="left"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:text="ব্যবসায়ে জমাকৃত টাকা" />
+
+        <EditText
+            android:id="@+id/edBusinessTK"
+            style="@style/calculator_tex_style"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ed_background"
+            android:gravity="center"
+            android:hint="টাকা"
+            android:inputType="number"
+            android:maxLength="12"
+            android:textColorHint="#57FFFFFF" />
+      </RelativeLayout>
+
+      <!-- Divider Layout -->
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="3dp"
+          android:layout_marginTop="20dp"
+          android:layout_marginBottom="20dp"
+          android:background="#14403C" />
+      <!-- Animal, Fish, Poultry Input Part -->
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="5dp">
+
+        <TextView
+            style="@style/calculator_tex_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="left"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:text="প্রাণী / মাছ চাষ / পোলট্রি" />
+
+        <EditText
+            android:id="@+id/edVarieties"
+            style="@style/calculator_tex_style"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ed_background"
+            android:gravity="center"
+            android:hint="টাকা"
+            android:inputType="number"
+            android:maxLength="12"
+            android:textColorHint="#57FFFFFF" />
+      </RelativeLayout>
+
+
+      <!-- Divider Layout -->
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="3dp"
+          android:layout_marginTop="20dp"
+          android:layout_marginBottom="20dp"
+          android:background="#14403C" />
+      <!-- Debts Input Part -->
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="5dp">
+
+        <TextView
+            style="@style/calculator_tex_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="left"
+            android:maxLines="2"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:text="ঋণ করেছেন কিন্তু এ বছর পরিশোধ\n হুয়নি সেই সম্পদের পরিমাণ" />
+
+        <EditText
+            android:id="@+id/edDebtTK"
+            style="@style/calculator_tex_style"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ed_background"
+            android:gravity="center"
+            android:hint="টাকা"
+            android:inputType="number"
+            android:maxLength="12"
+            android:textColorHint="#57FFFFFF" />
+      </RelativeLayout>
+      <!-- Divider Layout -->
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="3dp"
+          android:layout_marginTop="20dp"
+          android:layout_marginBottom="20dp"
+          android:background="#14403C" />
+
+      <Button
+          android:id="@+id/btnCalculate"
+          style="@style/button_text_style"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:layout_marginTop="20dp"
+          android:gravity="center"
+          android:paddingLeft="15dp"
+          android:paddingRight="15dp"
+          android:text="ক্যালকুলেট" />
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:layout_margin="15dp"
+          android:background="@drawable/two_color_tv"
+          android:gravity="center"
+          android:orientation="vertical"
+
+          >
+
+        <TextView
+            style="@style/calculator_tex_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="আপনার মোট সম্পদের পরিমাণ" />
+
+        <TextView
+            android:id="@+id/tvTotalAsset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="0dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="0dp"
+            android:text="5485454"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            style="@style/calculator_tex_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="টাকা" />
+
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:layout_margin="15dp"
+          android:background="@drawable/two_color_tv"
+          android:gravity="center"
+          android:orientation="vertical"
+
+          >
+
+        <TextView
+            android:id="@+id/tvZakatMessage"
+            style="@style/calculator_tex_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="এ বছর আপনার যাকাত হলো" />
+
+        <TextView
+            android:id="@+id/tvZakat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:paddingTop="0dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="0dp"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            style="@style/calculator_tex_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="টাকা" />
+
+      </LinearLayout>
+
+
+    </LinearLayout>
+  </ScrollView>
+
+  </RelativeLayout>
