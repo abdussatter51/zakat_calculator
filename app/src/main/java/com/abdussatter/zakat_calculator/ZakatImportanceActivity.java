@@ -21,7 +21,7 @@ public class ZakatImportanceActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent mainIntent = new Intent(ZakatImportanceActivity.this, MainActivity.class);
                 startActivity(mainIntent);
-                Toast.makeText(ZakatImportanceActivity.this, "Successfully back to main page!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ZakatImportanceActivity.this, "Successfully back to home page!", Toast.LENGTH_SHORT).show();
             }
         });
     }

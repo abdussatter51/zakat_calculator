@@ -19,6 +19,33 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ZakatCalculator">
         <activity
+            android:name=".ZakatOweMasalaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ZakatMasalaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ZakatProhibitedActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ZakatGiveActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ZakatFaradActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ZakatAccountActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ZakatFreeAssetActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ZakatableAssetActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ZakatPunishmentActivity"
+            android:exported="false" />
+        <activity
             android:name=".ZakatImportanceActivity"
             android:exported="false" />
         <activity

@@ -30,8 +30,6 @@ public class MainActivity extends AppCompatActivity {
         tvZMasala = findViewById(R.id.tvZMasala);
         tvZOweMasala = findViewById(R.id.tvZOweMasala);
         tvZVideo = findViewById(R.id.tvZVideo);
-        tvZVideo = findViewById(R.id.tvZVideo);
-
         //Go to Calculator Activity
         tvzCalculator.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,16 +37,6 @@ public class MainActivity extends AppCompatActivity {
                 Intent calculatorIntent = new Intent(MainActivity.this, CalculatorActivity.class);
                 startActivity(calculatorIntent);
                 Toast.makeText(MainActivity.this, "Welcome to Zakat Calculator!", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        //Go to Video Activity
-        tvZVideo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent videoIntent = new Intent( MainActivity.this, VideoPlaylist.class);
-                startActivity(videoIntent);
-                Toast.makeText(MainActivity.this, "যাকাত সংক্রান্ত ভিতিও", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -71,6 +59,108 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "যাকাতের প্রয়োজনীয়তা", Toast.LENGTH_SHORT).show();
             }
         });
+
+        //Go to Zakat Punishment Activity
+        tvZPunishment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent videoIntent = new Intent( MainActivity.this, ZakatPunishmentActivity.class);
+                startActivity(videoIntent);
+                Toast.makeText(MainActivity.this, "যাকাত না দেয়ার শাস্তি", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        //Go to Zakatable Asset Activity
+        tvZAsset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent videoIntent = new Intent( MainActivity.this, ZakatableAssetActivity.class);
+                startActivity(videoIntent);
+                Toast.makeText(MainActivity.this, "যে সম্পদের উপর যাকাত দিতে হয়", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        //Go to Zakat Free Asset Activity
+        tvZFree.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent videoIntent = new Intent( MainActivity.this, ZakatFreeAssetActivity.class);
+                startActivity(videoIntent);
+                Toast.makeText(MainActivity.this, "যে সম্পদের উপর যাকাত দিতে হয় না", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        //Go to Zakat Account and Distribution Activity
+        tvZAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent videoIntent = new Intent( MainActivity.this, ZakatAccountActivity.class);
+                startActivity(videoIntent);
+                Toast.makeText(MainActivity.this, "যাকাতের হিসাব ও বন্টনের খাত", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        //Go to Zakat Farad Activity
+        tvZFarad.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent videoIntent = new Intent( MainActivity.this, ZakatFaradActivity.class);
+                startActivity(videoIntent);
+                Toast.makeText(MainActivity.this, "যাকাত ফরজ হওয়ার শর্তসমূহ", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        //Go to Zakat Give Activity
+        tvZGive.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent videoIntent = new Intent( MainActivity.this, ZakatGiveActivity.class);
+                startActivity(videoIntent);
+                Toast.makeText(MainActivity.this, "যাদের যাকাত দেয়া যায়", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        //Go to Zakat Prohibited Activity
+        tvZProhibited.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent videoIntent = new Intent( MainActivity.this, ZakatProhibitedActivity.class);
+                startActivity(videoIntent);
+                Toast.makeText(MainActivity.this, "যাদের যাকাত দেয়া নিষেধ", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        //Go to Zakat Mas-Ala Activity
+        tvZMasala.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent videoIntent = new Intent( MainActivity.this, ZakatMasalaActivity.class);
+                startActivity(videoIntent);
+                Toast.makeText(MainActivity.this, "যাকাতের মাসলা-মাসায়েল", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        //Go to Zakat Owe Masala Activity
+        tvZOweMasala.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent videoIntent = new Intent( MainActivity.this, ZakatOweMasalaActivity.class);
+                startActivity(videoIntent);
+                Toast.makeText(MainActivity.this, "ঋণীর মাসায়েল", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        //Go to Video Activity
+        tvZVideo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent videoIntent = new Intent( MainActivity.this, VideoPlaylist.class);
+                startActivity(videoIntent);
+                Toast.makeText(MainActivity.this, "যাকাতের মাসলা-মাসায়েল ভিডিও", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
 
     }
 }

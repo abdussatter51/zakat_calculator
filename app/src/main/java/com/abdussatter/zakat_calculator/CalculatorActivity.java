@@ -49,7 +49,7 @@ public class CalculatorActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent mainIntent = new Intent(CalculatorActivity.this, MainActivity.class);
                 startActivity(mainIntent);
-                Toast.makeText(CalculatorActivity.this, "Successfully back to main page!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(CalculatorActivity.this, "Successfully back to home page!", Toast.LENGTH_SHORT).show();
             }
         });
 
