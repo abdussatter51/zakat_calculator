@@ -19,6 +19,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ZakatCalculator">
         <activity
+            android:name=".ZakatImportanceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ZakatActivity"
+            android:exported="false" />
+        <activity
             android:name=".VideoPlaylist"
             android:exported="false" />
         <activity

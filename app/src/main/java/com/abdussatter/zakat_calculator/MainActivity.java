@@ -48,7 +48,27 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent videoIntent = new Intent( MainActivity.this, VideoPlaylist.class);
                 startActivity(videoIntent);
-                Toast.makeText(MainActivity.this, "Welcome to Video Masala", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "যাকাত সংক্রান্ত ভিতিও", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        //Go to Zakat Activity
+        tvZWhat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent videoIntent = new Intent( MainActivity.this, ZakatActivity.class);
+                startActivity(videoIntent);
+                Toast.makeText(MainActivity.this, "যাকাত কি", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        //Go to Zakat Importance Activity
+        tvZImportance.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent videoIntent = new Intent( MainActivity.this, ZakatImportanceActivity.class);
+                startActivity(videoIntent);
+                Toast.makeText(MainActivity.this, "যাকাতের প্রয়োজনীয়তা", Toast.LENGTH_SHORT).show();
             }
         });
 
