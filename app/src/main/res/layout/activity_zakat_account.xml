@@ -72,7 +72,7 @@
                 android:gravity="center"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
-                android:text="@string/zakat_importance"
+                android:text="@string/zakat_account"
                 android:justificationMode="inter_word"
                 android:letterSpacing=".1"
                 android:lineHeight="20dp"

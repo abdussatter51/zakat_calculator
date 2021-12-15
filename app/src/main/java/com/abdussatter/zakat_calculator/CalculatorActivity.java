@@ -11,7 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class CalculatorActivity extends AppCompatActivity {
-    EditText edNisabTK, edGoldTK, edSilverTK, edStoneTK, edCashTK, edInvestmentTK, edLandTK, edBusinessTK, edVarieties, edDebtTK;
+    EditText edNisabTK, edGoldTK, edSilverTK, edStoneTK, edCashTK, edBankTK, edInvestmentTK, edLandTK, edBusinessTK, edVarieties, edDebtTK, edWagesTK, edUtilitesTK;
 
     TextView tvSItemBack, tvNisabTK,tvZakat, tvZakatMessage, tvTotalAsset;
 
@@ -28,11 +28,14 @@ public class CalculatorActivity extends AppCompatActivity {
         edSilverTK = findViewById(R.id.edSilverTK);
         edStoneTK = findViewById(R.id.edStoneTK);
         edCashTK = findViewById(R.id.edCashTK);
+        edBankTK = findViewById(R.id.edBankTK);
         edInvestmentTK = findViewById(R.id.edInvestmentTK);
         edLandTK = findViewById(R.id.edLandTK);
         edBusinessTK = findViewById(R.id.edBusinessTK);
         edVarieties = findViewById(R.id.edVarieties);
         edDebtTK = findViewById(R.id.edDebtTK);
+        edWagesTK = findViewById(R.id.edWagesTK);
+        edUtilitesTK = findViewById(R.id.edUtilitesTK);
         //TextView
         tvSItemBack = findViewById(R.id.tvSItemBack);
         tvNisabTK = findViewById(R.id.tvNisabTK);
@@ -78,12 +81,15 @@ public class CalculatorActivity extends AppCompatActivity {
                 String silverString = edSilverTK.getText().toString();
                 String stoneString = edStoneTK.getText().toString();
                 String cashString = edCashTK.getText().toString();
+                String bankString = edBankTK.getText().toString();
                 String investmentString = edInvestmentTK.getText().toString();
                 String landString = edLandTK.getText().toString();
                 String businessString = edBusinessTK.getText().toString();
                 String varietiesString = edVarieties.getText().toString();
                 String debtString = edDebtTK.getText().toString();
-                float goldTK = 0, sliverTk = 0, stoneTK = 0, cashTK = 0, investmentTK = 0, landTK = 0, businessTK = 0, varietiesTK = 0, debtTK = 0, totalAsset, zakatAmount;
+                String wagesString = edWagesTK.getText().toString();
+                String utilitiesString = edUtilitesTK.getText().toString();
+                float goldTK = 0, sliverTk = 0, stoneTK = 0, cashTK = 0, bankTK = 0, investmentTK = 0, landTK = 0, businessTK = 0, varietiesTK = 0, debtTK = 0, wagesTK = 0, utilitiesTK = 0, totalAsset, zakatAmount;
                 if (goldString.length()>0) {
                     goldTK = Float.parseFloat(goldString);
                 }
@@ -110,6 +116,12 @@ public class CalculatorActivity extends AppCompatActivity {
                 }
                 else {
                     cashTK = 0;
+                }
+                if (bankString.length()>0) {
+                    bankTK = Float.parseFloat(bankString);
+                }
+                else {
+                    bankTK = 0;
                 }
 
                 if (investmentString.length()>0) {
@@ -147,7 +159,21 @@ public class CalculatorActivity extends AppCompatActivity {
                     debtTK = 0;
                 }
 
-                totalAsset = goldTK + sliverTk + stoneTK + cashTK + investmentTK + landTK + businessTK + varietiesTK - debtTK;
+                if (wagesString.length()>0) {
+                    wagesTK = Float.parseFloat(wagesString);
+                }
+                else {
+                    wagesTK = 0;
+                }
+
+                if (utilitiesString.length()>0) {
+                    utilitiesTK = Float.parseFloat(utilitiesString);
+                }
+                else {
+                    utilitiesTK = 0;
+                }
+
+                totalAsset = goldTK + sliverTk + stoneTK + cashTK + bankTK + investmentTK + landTK + businessTK + varietiesTK - debtTK - wagesTK - utilitiesTK;
                 zakatAmount = (float) (totalAsset * 0.025);
                 tvTotalAsset.setText(""+totalAsset);
                 if (totalAsset > nisabAmount){

@@ -99,7 +99,7 @@
             android:paddingTop="0dp"
             android:paddingRight="10dp"
             android:paddingBottom="0dp"
-            android:text="41370.0"
+            android:text="48982.5"
             android:textColor="@color/white"
             android:textSize="20sp" />
 
@@ -139,7 +139,7 @@
             android:layout_centerHorizontal="true"
             android:background="@drawable/ed_background"
             android:gravity="center"
-            android:hint="788"
+            android:hint="933"
             android:inputType="number"
             android:maxLength="6"
             android:textColorHint="#57FFFFFF" />
@@ -199,6 +199,7 @@
           android:paddingBottom="0dp"
           android:text="@string/valuation_zakat" />
 
+      <!--      Divider Layout-->
       <Button
           android:id="@+id/btnNisabCalculate"
           style="@style/button_text_style"
@@ -210,7 +211,7 @@
           android:paddingLeft="15dp"
           android:paddingRight="15dp"
           android:text="পরিবর্তন করুন" />
-      <!--      Divider Layout-->
+
       <LinearLayout
           android:layout_width="match_parent"
           android:layout_height="3dp"
@@ -350,6 +351,44 @@
 
         <EditText
             android:id="@+id/edCashTK"
+            style="@style/calculator_tex_style"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ed_background"
+            android:gravity="center"
+            android:hint="টাকা"
+            android:inputType="number"
+            android:maxLength="12"
+            android:textColorHint="#57FFFFFF" />
+      </RelativeLayout>
+      <!-- Divider Layout -->
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="3dp"
+          android:layout_marginTop="20dp"
+          android:layout_marginBottom="20dp"
+          android:background="#14403C" />
+
+      <!-- Bank Input Part -->
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="5dp">
+
+        <TextView
+            style="@style/calculator_tex_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="left"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:text="ব্যাংকে জমাকৃত টাকা" />
+
+        <EditText
+            android:id="@+id/edBankTK"
             style="@style/calculator_tex_style"
             android:layout_width="120dp"
             android:layout_height="40dp"
@@ -554,6 +593,85 @@
             android:maxLength="12"
             android:textColorHint="#57FFFFFF" />
       </RelativeLayout>
+
+      <!-- Divider Layout -->
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="3dp"
+          android:layout_marginTop="20dp"
+          android:layout_marginBottom="20dp"
+          android:background="#14403C" />
+      <!-- Wages Due Input Part -->
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="5dp">
+
+        <TextView
+            style="@style/calculator_tex_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="left"
+            android:maxLines="2"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:text="মজুুরি ও বেতন বকেয়া\nযা অবিলম্বে পরিশোধ করতে হবে" />
+
+        <EditText
+            android:id="@+id/edWagesTK"
+            style="@style/calculator_tex_style"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ed_background"
+            android:gravity="center"
+            android:hint="টাকা"
+            android:inputType="number"
+            android:maxLength="12"
+            android:textColorHint="#57FFFFFF" />
+      </RelativeLayout>
+
+      <!-- Divider Layout -->
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="3dp"
+          android:layout_marginTop="20dp"
+          android:layout_marginBottom="20dp"
+          android:background="#14403C" />
+      <!-- Utilities Due Input Part -->
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="5dp">
+
+        <TextView
+            style="@style/calculator_tex_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="left"
+            android:maxLines="2"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:text="কর ও ইউলিটি বিল বকেয়া\nযা অবিলম্বে পরিশোধ করতে হবে" />
+
+        <EditText
+            android:id="@+id/edUtilitesTK"
+            style="@style/calculator_tex_style"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ed_background"
+            android:gravity="center"
+            android:hint="টাকা"
+            android:inputType="number"
+            android:maxLength="12"
+            android:textColorHint="#57FFFFFF" />
+      </RelativeLayout>
+
       <!-- Divider Layout -->
       <LinearLayout
           android:layout_width="match_parent"
