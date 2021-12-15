@@ -7,41 +7,13 @@
     android:orientation="vertical"
     android:background="@drawable/wallpaper"
     tools:context=".MainActivity">
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        >
 
-        <TextView
-            android:id="@+id/tvSItemBack"
-            style="@style/scroll_item_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:gravity="left"
-            android:text="Back"
-
-            />
-        <TextView
-            android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="বিস্তারিত"
-            style="@style/scroll_item_text"
-            android:gravity="left"
-            />
-
-
-    </RelativeLayout>
 
     <ScrollView
-        android:layout_marginBottom="-40dp"
-        android:layout_marginTop="-20dp"
+        android:layout_marginBottom="-30dp"
+        android:layout_marginTop="5dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:fillViewport="true"
         >
         <LinearLayout
